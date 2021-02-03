@@ -1,0 +1,12 @@
+<!-- Label and input for usernames and passwords using two way binding with ngModel -->
+<div>
+    <small *ngIf='invalidLogin'>{{errorMessage}}</small>
+    <br>
+    <label for="username">username: </label>
+    <input type="text" name="username" value="{{username}}" [(ngModel)]="username">
+    <br>
+    <label for="password">password: </label>
+    <input type="password" name="password" value="{{password}}" [(ngModel)]="password">
+    <br>
+    <button (click)=handleLogin()>Login</button>
+</div>
