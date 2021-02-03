@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
 
     if(this.username==="tommy" && this.password === "dummy") {
       //this creates the navigation route for this logical if statement
-      this.router.navigate(['welcome', this.username])
+      this.router.navigate(['welcome', this.username]);
 
 
       this.invalidLogin = false;
