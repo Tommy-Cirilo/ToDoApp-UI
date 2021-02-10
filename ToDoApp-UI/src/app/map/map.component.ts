@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MapServiceService } from '../map-service.service';
 
 @Component({
   selector: 'app-map',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  constructor(public maps: MapServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.maps.buildMap();
   }
 
 }
